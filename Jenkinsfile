@@ -1,15 +1,15 @@
 pipeline {
   environment {
-    dockerRegistry = "sanjeevkumarrao/docker-nodejs"
+    dockerRegistry = "ankit0999/docker-nodejs"
     dockerRegistryCredential = 'dockerhub'
     dockerImage = ''
   }
   agent any
-  tools {nodejs "node" }
+  tools {"node" }
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/sanjeevkumarrao/node-hello-world'
+        git 'https://github.com/Ankitkrsingh0999/node-hello-world-1.git'
       }
     }
     stage('Build') {
